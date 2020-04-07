@@ -465,5 +465,22 @@ public class DTTextField: UITextField {
             }
         }
     }
-    
+
+    public func bloqueiaCampo(_ a: Bool=true) {
+        self.isUserInteractionEnabled = false
+        self.textColor = UIColor.lightGray
+        self.isEnabled = false
+        self.backgroundColor = UIColor.red
+        self.borderStyle = .none
+        self.layer.cornerRadius = 0
+    }
+
+    public func desbloqueiaCampo(_ a: Bool=true) {
+        self.isUserInteractionEnabled = true
+        self.textColor = UIColor.black
+        self.isEnabled = true
+        self.backgroundColor = UIColor.white
+        self.borderStyle = .none
+        self.layer.cornerRadius = 5
+    }
 }
